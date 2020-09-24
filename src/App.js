@@ -42,30 +42,6 @@ const weather = require('./Utils/weather');
          res.send(data);
          
       });
-
-      // res.send({
-      //    "address": reqAddress,
-      //    "observation_time": "01:32 PM",
-      //    "temperature": 31,
-      //    "weather_code": 353,
-      //    "weather_icons": [
-      //    "https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0009_light_rain_showers.png"
-      //    ],
-      //    "weather_descriptions": [
-      //    "Light rain shower"
-      //    ],
-      //    "wind_speed": 14,
-      //    "wind_degree": 91,
-      //    "wind_dir": "E",
-      //    "pressure": 1008,
-      //    "precip": 0.6,
-      //    "humidity": 59,
-      //    "cloudcover": 72,
-      //    "feelslike": 35,
-      //    "uv_index": 7,
-      //    "visibility": 10,
-      //    "is_day": "yes"
-      // });
  });
 
 
@@ -73,4 +49,6 @@ const weather = require('./Utils/weather');
  /** 
   * TODO: Listen to server
   */
-app.listen('3000', console.log('Server Running on Port 3000'))
+const port = process.env.PORT || 3000
+
+app.listen(port)
